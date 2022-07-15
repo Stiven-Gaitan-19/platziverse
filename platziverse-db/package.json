@@ -1,0 +1,28 @@
+{
+  "name": "platziverse-db",
+  "version": "1.0.0",
+  "description": "A Simple IoT Platform - DB Module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stiven-Gaitan-19/platziverse.git"
+  },
+  "author": "Stiven Gaitan <johan.gaitan@mqa-bc.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Stiven-Gaitan-19/platziverse/issues"
+  },
+  "homepage": "https://github.com/Stiven-Gaitan-19/platziverse#readme",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "dependencies": {
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.3"
+  }
+}
