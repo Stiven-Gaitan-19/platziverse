@@ -4,7 +4,7 @@
   "description": "A Simple IoT Platform - DB Module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "@powershell $env:DEBUG='platziverse:*';nyc --reporter=lcov ava tests/ --verbose",
     "lint": "standard",
     "setup": "@powershell $env:DEBUG='platziverse:*';node setup.js"
   },
@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/Stiven-Gaitan-19/platziverse#readme",
   "devDependencies": {
+    "ava": "^4.3.1",
+    "nyc": "^15.1.0",
+    "proxyquire": "^2.1.3",
+    "sinon": "^14.0.0",
+    "sqlite3": "^5.0.9",
     "standard": "^17.0.0"
   },
   "dependencies": {

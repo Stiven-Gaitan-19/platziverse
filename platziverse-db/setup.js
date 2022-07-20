@@ -8,12 +8,11 @@ const chalk = require('chalk')
 const prompt = inquirer.createPromptModule()
 
 async function setup () {
-
-  let response = await prompt([{
+  const response = await prompt([{
     type: 'confirm',
     name: 'setup',
     message: 'Do you want to re-create the database?'
-  }]);
+  }])
 
   const config = {
     database: process.env.DB_NAME || 'platziverse',
@@ -32,7 +31,7 @@ async function setup () {
 }
 
 function handleError (err) {
-  console.error(chalk.red('[Error] => ')+err.message)
+  console.error(chalk.red('[Error] => ') + err.message)
   console.error(err.stack)
   process.exit(1)
 }
