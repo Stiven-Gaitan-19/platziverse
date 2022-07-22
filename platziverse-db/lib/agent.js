@@ -22,8 +22,40 @@ module.exports = (agentModel) => {
     return result.toJSON()
   }
 
+  async function findByUuid (uuid) {
+    return agentModel.findOne({
+      where: {
+        uuid
+      }
+    })
+  }
+
+  async function findByUsername (username) {
+    return agentModel.findAll({
+      where: {
+        username
+      }
+    })
+  }
+
+  async function findByConnected () {
+    return agentModel.findAll({
+      where: {
+        connected: true
+      }
+    })
+  }
+
+  async function findAll () {
+    return agentModel.findAll()
+  }
+
   return {
     findById,
-    save
+    findByUuid,
+    save,
+    findByUsername,
+    findByConnected,
+    findAll
   }
 }
