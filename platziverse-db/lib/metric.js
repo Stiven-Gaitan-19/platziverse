@@ -31,7 +31,7 @@ module.exports = function setupMetric (agentModel, metricModel) {
     })
   }
 
-  async function create (uuid, metric) {
+  async function save (uuid, metric) {
     const agent = await agentModel.findOne({ where: { uuid } })
 
     if (agent) {
@@ -44,6 +44,6 @@ module.exports = function setupMetric (agentModel, metricModel) {
   return {
     findByUuid,
     findByTypeAgentUuid,
-    create
+    save
   }
 }
